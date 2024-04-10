@@ -1,6 +1,6 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:fixer_system/screens/repairs_page/repairs_page.dart';
-import 'package:flutterflow_ui/flutterflow_ui.dart';
+import 'package:fixer_system/screens/login/login.dart';
+import 'package:flutterflow_ui_pro/flutterflow_ui_pro.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    FlutterFlowTheme.of(context).primary = Color(0xFFF68B1E);
+    FlutterFlowTheme.of(context).primary = const Color(0xFFF68B1E);
     return AdaptiveTheme(
       light: ThemeData(
         useMaterial3: true,
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         title: 'Fixer',
         theme: theme,
         darkTheme: darkTheme,
-        home: RepairsPage(),
+        home: const Login(),
       ),
     );
   }

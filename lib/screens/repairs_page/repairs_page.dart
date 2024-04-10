@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fixer_system/components/main_nav/main_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterflow_ui/flutterflow_ui.dart';
+import 'package:flutterflow_ui_pro/flutterflow_ui_pro.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'repairs_model.dart';
@@ -499,7 +499,7 @@ class _RepairsPageState extends State<RepairsPage> {
               tablet: false,
             ))
               wrapWithModel(
-                model: _model.mainWebNavModel,
+                model: _model.mainNavModel,
                 updateCallback: () => setState(() {}),
                 child: MainNavWidget(
                   navOne: FlutterFlowTheme.of(context).secondaryText,
