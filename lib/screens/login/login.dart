@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
                       child: Image.asset(
                         'assets/images/51.png',
                         width: MediaQuery.sizeOf(context).width * 0.5,
-                        height: MediaQuery.sizeOf(context).height * 0.25,
+                        height: MediaQuery.sizeOf(context).width * 0.25,
                         fit: BoxFit.cover,
                       ),
                     ),

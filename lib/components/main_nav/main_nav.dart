@@ -1,5 +1,7 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:fixer_system/screens/bills_page/bills_page.dart';
+import 'package:fixer_system/screens/clients_page/clients_page.dart';
+import 'package:fixer_system/screens/inventory_page/inventory_page.dart';
 import 'package:fixer_system/screens/monthly_profite_page/monthly_profit_page.dart';
 import 'package:fixer_system/screens/team_page/team_page.dart';
 import 'package:flutter/material.dart';
@@ -263,15 +265,15 @@ class _MainNavWidgetState extends State<MainNavWidget>
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    /*Navigator.push(
+                    Navigator.push(
                       context,
                       PageTransition(
                         type: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 0),
-                        reverseDuration: Duration(milliseconds: 0),
-                        child: ProjectsWidget(),
+                        duration: const Duration(milliseconds: 0),
+                        reverseDuration: const Duration(milliseconds: 0),
+                        child: const ClientsPage(),
                       ),
-                    );*/
+                    );
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
@@ -474,15 +476,15 @@ class _MainNavWidgetState extends State<MainNavWidget>
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    /*Navigator.push(
+                    Navigator.push(
                       context,
                       PageTransition(
                         type: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 0),
-                        reverseDuration: Duration(milliseconds: 0),
-                        child: TeamMembersWidget(),
+                        duration: const Duration(milliseconds: 0),
+                        reverseDuration: const Duration(milliseconds: 0),
+                        child: const InventoryPage(),
                       ),
-                    );*/
+                    );
                   },
                   child: Row(
                     mainAxisSize: MainAxisSize.max,

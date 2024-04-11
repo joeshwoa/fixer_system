@@ -299,7 +299,7 @@ class _BillsPageState extends State<BillsPage> {
                                                   padding: const EdgeInsetsDirectional
                                                       .fromSTEB(0, 4, 0, 0),
                                                   child: Text(
-                                                    'Car ID',
+                                                    'Car Code',
                                                     style: FlutterFlowTheme.of(
                                                         context)
                                                         .bodySmall

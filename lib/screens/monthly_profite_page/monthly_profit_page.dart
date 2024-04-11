@@ -272,6 +272,120 @@ class _MonthlyProfitPageState extends State<MonthlyProfitPage> {
                                       ),
                                     ],
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                                          child: FlutterFlowDropDown(
+                                            initialOption: '2024',
+                                            options: const ['2024'],
+                                            onChanged: (val) => setState(() => _model.dropDownValue1 = val),
+                                            width: 150,
+                                            height: 56,
+                                            textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                                              letterSpacing: 0,
+                                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                                  FlutterFlowTheme.of(context).bodyMediumFamily),
+                                            ),
+                                            hintText: 'Select year',
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                              size: 24,
+                                            ),
+                                            fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                                            elevation: 2,
+                                            borderColor: FlutterFlowTheme.of(context).accent2,
+                                            borderWidth: 2,
+                                            borderRadius: 8,
+                                            margin: const EdgeInsetsDirectional.fromSTEB(16, 4, 16, 4),
+                                            hidesUnderline: true,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                                          child: FlutterFlowDropDown(
+                                            initialOption: '5',
+                                            options: const ['5'],
+                                            onChanged: (val) => setState(() => _model.dropDownValue2 = val),
+                                            width: 150,
+                                            height: 56,
+                                            textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                                              letterSpacing: 0,
+                                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                                  FlutterFlowTheme.of(context).bodyMediumFamily),
+                                            ),
+                                            hintText: 'Select month',
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                              size: 24,
+                                            ),
+                                            fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                                            elevation: 2,
+                                            borderColor: FlutterFlowTheme.of(context).accent2,
+                                            borderWidth: 2,
+                                            borderRadius: 8,
+                                            margin: const EdgeInsetsDirectional.fromSTEB(16, 4, 16, 4),
+                                            hidesUnderline: true,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                            width: 100,
+                                            height: 1,
+                                            decoration: BoxDecoration(
+                                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                                            ),
+                                          ),
+                                        ),
+                                        if (responsiveVisibility(
+                                          context: context,
+                                          phone: false,
+                                        ))
+                                          Padding(
+                                            padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
+                                            child: Container(
+                                              width: 50,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                boxShadow: const [
+                                                  BoxShadow(
+                                                    blurRadius: 4,
+                                                    color: Color(0x33000000),
+                                                    offset: Offset(
+                                                      0,
+                                                      2,
+                                                    ),
+                                                  )
+                                                ],
+                                                borderRadius: BorderRadius.circular(16),
+                                              ),
+                                              child: FlutterFlowIconButton(
+                                                borderColor: FlutterFlowTheme.of(context).lineColor,
+                                                borderRadius: 12,
+                                                borderWidth: 1,
+                                                buttonSize: 50,
+                                                fillColor: FlutterFlowTheme.of(context).secondaryBackground,
+                                                icon: Icon(
+                                                  Icons.search_rounded,
+                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                  size: 24,
+                                                ),
+                                                onPressed: () async {
+                                                },
+                                              ),
+                                            ),
+                                          ),
+                                      ],
+                                    ),
+                                  ),
                                   if (responsiveVisibility(
                                     context: context,
                                     phone: false,

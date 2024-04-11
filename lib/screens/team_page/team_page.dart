@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fixer_system/components/main_nav/main_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterflow_ui_pro/flutterflow_ui_pro.dart';
@@ -81,69 +80,54 @@ class _TeamPageState extends State<TeamPage> {
                               width: double.infinity,
                               height: 44,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                color: FlutterFlowTheme.of(context).secondaryBackground,
                               ),
                             ),
                           Padding(
-                            padding:
-                            const EdgeInsetsDirectional.fromSTEB(16, 24, 16, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(16, 24, 16, 0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Expanded(
                                       flex: 5,
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 12, 0),
+                                        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'Team Members',
-                                              style:
-                                              FlutterFlowTheme.of(context)
+                                              style: FlutterFlowTheme.of(context)
                                                   .displaySmall
                                                   .override(
-                                                fontFamily:
-                                                FlutterFlowTheme.of(
-                                                    context)
+                                                fontFamily: FlutterFlowTheme.of(context)
                                                     .displaySmallFamily,
                                                 letterSpacing: 0,
-                                                useGoogleFonts: GoogleFonts
-                                                    .asMap()
+                                                useGoogleFonts: GoogleFonts.asMap()
                                                     .containsKey(
-                                                    FlutterFlowTheme.of(
-                                                        context)
+                                                    FlutterFlowTheme.of(context)
                                                         .displaySmallFamily),
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0, 4, 0, 0),
+                                              padding:
+                                              const EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                               child: Text(
                                                 'Manage your team below.',
-                                                style:
-                                                FlutterFlowTheme.of(context)
+                                                style: FlutterFlowTheme.of(context)
                                                     .bodySmall
                                                     .override(
-                                                  fontFamily:
-                                                  FlutterFlowTheme.of(
-                                                      context)
+                                                  fontFamily: FlutterFlowTheme.of(context)
                                                       .bodySmallFamily,
                                                   letterSpacing: 0,
-                                                  useGoogleFonts: GoogleFonts
-                                                      .asMap()
+                                                  useGoogleFonts: GoogleFonts.asMap()
                                                       .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                          context)
+                                                      FlutterFlowTheme.of(context)
                                                           .bodySmallFamily),
                                                 ),
                                               ),
@@ -156,22 +140,20 @@ class _TeamPageState extends State<TeamPage> {
                                       flex: 3,
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           if (responsiveVisibility(
                                             context: context,
                                             phone: false,
                                           ))
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0, 0, 12, 0),
+                                              padding:
+                                              const EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
                                               child: Container(
                                                 width: 50,
                                                 height: 50,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                      context)
+                                                  color: FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
                                                   boxShadow: const [
                                                     BoxShadow(
@@ -183,29 +165,24 @@ class _TeamPageState extends State<TeamPage> {
                                                       ),
                                                     )
                                                   ],
-                                                  borderRadius:
-                                                  BorderRadius.circular(16),
+                                                  borderRadius: BorderRadius.circular(16),
                                                 ),
                                                 child: FlutterFlowIconButton(
                                                   borderColor:
-                                                  FlutterFlowTheme.of(
-                                                      context)
-                                                      .lineColor,
+                                                  FlutterFlowTheme.of(context).lineColor,
                                                   borderRadius: 12,
                                                   borderWidth: 1,
                                                   buttonSize: 50,
-                                                  fillColor:
-                                                  FlutterFlowTheme.of(
-                                                      context)
+                                                  fillColor: FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
                                                   icon: Icon(
                                                     Icons.person_add_rounded,
-                                                    color: FlutterFlowTheme.of(
-                                                        context)
+                                                    color: FlutterFlowTheme.of(context)
                                                         .secondaryText,
                                                     size: 24,
                                                   ),
-                                                  onPressed: () async {},
+                                                  onPressed: () async {
+                                                  },
                                                 ),
                                               ),
                                             ),
@@ -222,8 +199,7 @@ class _TeamPageState extends State<TeamPage> {
                                   Divider(
                                     height: 24,
                                     thickness: 1,
-                                    color:
-                                    FlutterFlowTheme.of(context).lineColor,
+                                    color: FlutterFlowTheme.of(context).lineColor,
                                   ),
                                 if (responsiveVisibility(
                                   context: context,
@@ -233,36 +209,29 @@ class _TeamPageState extends State<TeamPage> {
                                   Divider(
                                     height: 44,
                                     thickness: 1,
-                                    color:
-                                    FlutterFlowTheme.of(context).lineColor,
+                                    color: FlutterFlowTheme.of(context).lineColor,
                                   ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0, 12, 0, 0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                                   child: Container(
                                     width: MediaQuery.sizeOf(context).width,
                                     decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
+                                      color: FlutterFlowTheme.of(context).secondaryBackground,
                                       borderRadius: BorderRadius.circular(8),
                                       border: Border.all(
-                                        color: FlutterFlowTheme.of(context)
-                                            .lineColor,
+                                        color: FlutterFlowTheme.of(context).lineColor,
                                         width: 1,
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 12),
+                                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
                                         children: [
                                           Padding(
                                             padding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                12, 12, 12, 0),
+                                            const EdgeInsetsDirectional.fromSTEB(12, 12, 12, 0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -270,20 +239,16 @@ class _TeamPageState extends State<TeamPage> {
                                                   flex: 2,
                                                   child: Text(
                                                     'Name',
-                                                    style: FlutterFlowTheme.of(
-                                                        context)
+                                                    style: FlutterFlowTheme.of(context)
                                                         .bodySmall
                                                         .override(
                                                       fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                          context)
+                                                      FlutterFlowTheme.of(context)
                                                           .bodySmallFamily,
                                                       letterSpacing: 0,
-                                                      useGoogleFonts: GoogleFonts
-                                                          .asMap()
+                                                      useGoogleFonts: GoogleFonts.asMap()
                                                           .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                              context)
+                                                          FlutterFlowTheme.of(context)
                                                               .bodySmallFamily),
                                                     ),
                                                   ),
@@ -294,21 +259,16 @@ class _TeamPageState extends State<TeamPage> {
                                                   tablet: false,
                                                 ))
                                                   Expanded(
-                                                    flex: 2,
                                                     child: Text(
                                                       'National ID',
-                                                      style:
-                                                      FlutterFlowTheme.of(
-                                                          context)
+                                                      style: FlutterFlowTheme.of(context)
                                                           .bodySmall
                                                           .override(
-                                                        fontFamily: FlutterFlowTheme.of(
-                                                            context)
+                                                        fontFamily:
+                                                        FlutterFlowTheme.of(context)
                                                             .bodySmallFamily,
-                                                        letterSpacing:
-                                                        0,
-                                                        useGoogleFonts: GoogleFonts
-                                                            .asMap()
+                                                        letterSpacing: 0,
+                                                        useGoogleFonts: GoogleFonts.asMap()
                                                             .containsKey(
                                                             FlutterFlowTheme.of(context)
                                                                 .bodySmallFamily),
@@ -322,18 +282,14 @@ class _TeamPageState extends State<TeamPage> {
                                                   Expanded(
                                                     child: Text(
                                                       'Phone Number',
-                                                      style:
-                                                      FlutterFlowTheme.of(
-                                                          context)
+                                                      style: FlutterFlowTheme.of(context)
                                                           .bodySmall
                                                           .override(
-                                                        fontFamily: FlutterFlowTheme.of(
-                                                            context)
+                                                        fontFamily:
+                                                        FlutterFlowTheme.of(context)
                                                             .bodySmallFamily,
-                                                        letterSpacing:
-                                                        0,
-                                                        useGoogleFonts: GoogleFonts
-                                                            .asMap()
+                                                        letterSpacing: 0,
+                                                        useGoogleFonts: GoogleFonts.asMap()
                                                             .containsKey(
                                                             FlutterFlowTheme.of(context)
                                                                 .bodySmallFamily),
@@ -348,18 +304,14 @@ class _TeamPageState extends State<TeamPage> {
                                                   Expanded(
                                                     child: Text(
                                                       'Job Title',
-                                                      style:
-                                                      FlutterFlowTheme.of(
-                                                          context)
+                                                      style: FlutterFlowTheme.of(context)
                                                           .bodySmall
                                                           .override(
-                                                        fontFamily: FlutterFlowTheme.of(
-                                                            context)
+                                                        fontFamily:
+                                                        FlutterFlowTheme.of(context)
                                                             .bodySmallFamily,
-                                                        letterSpacing:
-                                                        0,
-                                                        useGoogleFonts: GoogleFonts
-                                                            .asMap()
+                                                        letterSpacing: 0,
+                                                        useGoogleFonts: GoogleFonts.asMap()
                                                             .containsKey(
                                                             FlutterFlowTheme.of(context)
                                                                 .bodySmallFamily),
@@ -367,24 +319,43 @@ class _TeamPageState extends State<TeamPage> {
                                                     ),
                                                   ),
                                                 Expanded(
-                                                  child: Text(
-                                                    'Salary',
-                                                    textAlign: TextAlign.end,
-                                                    style: FlutterFlowTheme.of(
-                                                        context)
-                                                        .bodySmall
-                                                        .override(
-                                                      fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                          context)
-                                                          .bodySmallFamily,
-                                                      letterSpacing: 0,
-                                                      useGoogleFonts: GoogleFonts
-                                                          .asMap()
-                                                          .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                              context)
-                                                              .bodySmallFamily),
+                                                  child: Align(
+                                                    alignment: const AlignmentDirectional(-1, 0),
+                                                    child: Text(
+                                                      'Salary',
+                                                      textAlign: TextAlign.end,
+                                                      style: FlutterFlowTheme.of(context)
+                                                          .bodySmall
+                                                          .override(
+                                                        fontFamily:
+                                                        FlutterFlowTheme.of(context)
+                                                            .bodySmallFamily,
+                                                        letterSpacing: 0,
+                                                        useGoogleFonts: GoogleFonts.asMap()
+                                                            .containsKey(
+                                                            FlutterFlowTheme.of(context)
+                                                                .bodySmallFamily),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Expanded(
+                                                  child: Align(
+                                                    alignment: const AlignmentDirectional(1, 0),
+                                                    child: Text(
+                                                      'Operations',
+                                                      style: FlutterFlowTheme.of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                        fontFamily:
+                                                        FlutterFlowTheme.of(context)
+                                                            .bodyMediumFamily,
+                                                        letterSpacing: 0,
+                                                        useGoogleFonts: GoogleFonts.asMap()
+                                                            .containsKey(
+                                                            FlutterFlowTheme.of(context)
+                                                                .bodyMediumFamily),
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
@@ -393,27 +364,24 @@ class _TeamPageState extends State<TeamPage> {
                                           ),
                                           Padding(
                                             padding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0, 16, 0, 0),
+                                            const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                                             child: ListView(
                                               padding: EdgeInsets.zero,
                                               shrinkWrap: true,
                                               scrollDirection: Axis.vertical,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(0, 0, 0, 2),
+                                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                                      0, 0, 0, 2),
                                                   child: Container(
                                                     width: double.infinity,
                                                     decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                          .of(context)
+                                                      color: FlutterFlowTheme.of(context)
                                                           .secondaryBackground,
                                                       boxShadow: [
                                                         BoxShadow(
                                                           blurRadius: 0,
-                                                          color: FlutterFlowTheme
-                                                              .of(context)
+                                                          color: FlutterFlowTheme.of(context)
                                                               .lineColor,
                                                           offset: const Offset(
                                                             0,
@@ -423,98 +391,95 @@ class _TeamPageState extends State<TeamPage> {
                                                       ],
                                                     ),
                                                     child: Padding(
-                                                      padding:
-                                                      const EdgeInsets.all(12),
+                                                      padding: const EdgeInsets.all(12),
                                                       child: Row(
-                                                        mainAxisSize:
-                                                        MainAxisSize.max,
+                                                        mainAxisSize: MainAxisSize.max,
                                                         children: [
                                                           Expanded(
                                                             flex: 2,
                                                             child: Row(
-                                                              mainAxisSize:
-                                                              MainAxisSize
-                                                                  .max,
+                                                              mainAxisSize: MainAxisSize.max,
                                                               children: [
-                                                                Padding(
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                      0,
-                                                                      0,
-                                                                      12,
-                                                                      0),
-                                                                  child:
-                                                                  ClipRRect(
-                                                                    borderRadius:
-                                                                    BorderRadius.circular(
-                                                                        12),
-                                                                    child:
-                                                                    CachedNetworkImage(
-                                                                      fadeInDuration:
-                                                                      const Duration(
-                                                                          milliseconds: 500),
-                                                                      fadeOutDuration:
-                                                                      const Duration(
-                                                                          milliseconds: 500),
-                                                                      imageUrl:
-                                                                      'https://picsum.photos/seed/274/600',
-                                                                      width: 40,
-                                                                      height:
-                                                                      40,
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                    ),
-                                                                  ),
-                                                                ),
                                                                 Column(
                                                                   mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
+                                                                  MainAxisSize.max,
                                                                   crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
+                                                                  CrossAxisAlignment.start,
                                                                   children: [
-                                                                    AutoSizeText(
-                                                                      'joeshwoa',
-                                                                      style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                          .titleMedium
-                                                                          .override(
-                                                                        fontFamily:
-                                                                        FlutterFlowTheme.of(context).titleMediumFamily,
-                                                                        letterSpacing:
-                                                                        0,
-                                                                        useGoogleFonts:
-                                                                        GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleMediumFamily),
-                                                                      ),
-                                                                    ),
                                                                     if (responsiveVisibility(
-                                                                      context:
-                                                                      context,
-                                                                      tabletLandscape:
-                                                                      false,
-                                                                      desktop:
-                                                                      false,
+                                                                      context: context,
+                                                                      tabletLandscape: false,
+                                                                      desktop: false,
                                                                     ))
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            0,
-                                                                            2,
-                                                                            0,
-                                                                            0),
-                                                                        child:
-                                                                        Text(
+                                                                        padding:
+                                                                        const EdgeInsetsDirectional
+                                                                            .fromSTEB(
+                                                                            0, 2, 0, 0),
+                                                                        child: Text(
                                                                           'user@domainname.com',
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: FlutterFlowTheme
+                                                                              .of(context)
                                                                               .bodySmall
                                                                               .override(
-                                                                            fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
-                                                                            letterSpacing: 0,
-                                                                            useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
+                                                                            fontFamily: FlutterFlowTheme.of(
+                                                                                context)
+                                                                                .bodySmallFamily,
+                                                                            letterSpacing:
+                                                                            0,
+                                                                            useGoogleFonts: GoogleFonts
+                                                                                .asMap()
+                                                                                .containsKey(
+                                                                                FlutterFlowTheme.of(context)
+                                                                                    .bodySmallFamily),
                                                                           ),
                                                                         ),
                                                                       ),
                                                                   ],
+                                                                ),
+                                                                Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(0, 0, 12, 0),
+                                                                  child: Container(
+                                                                    width: 40,
+                                                                    height: 40,
+                                                                    decoration: BoxDecoration(
+                                                                      color: const Color(0x428377F3),
+                                                                      borderRadius:
+                                                                      BorderRadius.circular(
+                                                                          12),
+                                                                    ),
+                                                                    alignment:
+                                                                    const AlignmentDirectional(
+                                                                        0, 0),
+                                                                    child: Icon(
+                                                                      Icons.person_rounded,
+                                                                      color:
+                                                                      FlutterFlowTheme.of(
+                                                                          context)
+                                                                          .primary,
+                                                                      size: 24,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                AutoSizeText(
+                                                                  'joeshwoa',
+                                                                  style: FlutterFlowTheme.of(
+                                                                      context)
+                                                                      .titleMedium
+                                                                      .override(
+                                                                    fontFamily:
+                                                                    FlutterFlowTheme.of(
+                                                                        context)
+                                                                        .titleMediumFamily,
+                                                                    letterSpacing: 0,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                        .containsKey(
+                                                                        FlutterFlowTheme.of(
+                                                                            context)
+                                                                            .titleMediumFamily),
+                                                                  ),
                                                                 ),
                                                               ],
                                                             ),
@@ -525,22 +490,23 @@ class _TeamPageState extends State<TeamPage> {
                                                             tablet: false,
                                                           ))
                                                             Expanded(
-                                                              flex: 2,
                                                               child: Text(
                                                                 '30204260100123',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
+                                                                style:
+                                                                FlutterFlowTheme.of(context)
                                                                     .bodyMedium
                                                                     .override(
                                                                   fontFamily:
-                                                                  FlutterFlowTheme.of(context)
+                                                                  FlutterFlowTheme.of(
+                                                                      context)
                                                                       .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                  0,
+                                                                  letterSpacing: 0,
                                                                   useGoogleFonts: GoogleFonts
                                                                       .asMap()
                                                                       .containsKey(
-                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                      FlutterFlowTheme.of(
+                                                                          context)
+                                                                          .bodyMediumFamily),
                                                                 ),
                                                               ),
                                                             ),
@@ -551,19 +517,21 @@ class _TeamPageState extends State<TeamPage> {
                                                             Expanded(
                                                               child: Text(
                                                                 '01202946596',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
+                                                                style:
+                                                                FlutterFlowTheme.of(context)
                                                                     .bodyMedium
                                                                     .override(
                                                                   fontFamily:
-                                                                  FlutterFlowTheme.of(context)
+                                                                  FlutterFlowTheme.of(
+                                                                      context)
                                                                       .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                  0,
+                                                                  letterSpacing: 0,
                                                                   useGoogleFonts: GoogleFonts
                                                                       .asMap()
                                                                       .containsKey(
-                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                      FlutterFlowTheme.of(
+                                                                          context)
+                                                                          .bodyMediumFamily),
                                                                 ),
                                                               ),
                                                             ),
@@ -575,338 +543,208 @@ class _TeamPageState extends State<TeamPage> {
                                                             Expanded(
                                                               child: Text(
                                                                 'Dev',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
+                                                                style:
+                                                                FlutterFlowTheme.of(context)
                                                                     .bodyMedium
                                                                     .override(
                                                                   fontFamily:
-                                                                  FlutterFlowTheme.of(context)
+                                                                  FlutterFlowTheme.of(
+                                                                      context)
                                                                       .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                  0,
+                                                                  letterSpacing: 0,
                                                                   useGoogleFonts: GoogleFonts
                                                                       .asMap()
                                                                       .containsKey(
-                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                      FlutterFlowTheme.of(
+                                                                          context)
+                                                                          .bodyMediumFamily),
                                                                 ),
                                                               ),
                                                             ),
                                                           Expanded(
                                                             child: Column(
-                                                              mainAxisSize:
-                                                              MainAxisSize
-                                                                  .max,
+                                                              mainAxisSize: MainAxisSize.max,
                                                               crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .end,
+                                                              CrossAxisAlignment.end,
                                                               children: [
-                                                                Text(
-                                                                  '5000 EGP',
-                                                                  style: FlutterFlowTheme.of(
-                                                                      context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                    fontFamily:
-                                                                    FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                    color: FlutterFlowTheme.of(context)
-                                                                        .alternate,
-                                                                    letterSpacing:
-                                                                    0,
-                                                                    useGoogleFonts:
-                                                                    GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                Align(
+                                                                  alignment:
+                                                                  const AlignmentDirectional(
+                                                                      -1, 0),
+                                                                  child: Text(
+                                                                    '5000 EGP',
+                                                                    style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                      fontFamily:
+                                                                      FlutterFlowTheme.of(
+                                                                          context)
+                                                                          .bodyMediumFamily,
+                                                                      color: FlutterFlowTheme
+                                                                          .of(context)
+                                                                          .alternate,
+                                                                      letterSpacing: 0,
+                                                                      useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                          .containsKey(
+                                                                          FlutterFlowTheme.of(
+                                                                              context)
+                                                                              .bodyMediumFamily),
+                                                                    ),
                                                                   ),
                                                                 ),
                                                                 if (responsiveVisibility(
-                                                                  context:
-                                                                  context,
+                                                                  context: context,
                                                                   tablet: false,
-                                                                  tabletLandscape:
-                                                                  false,
-                                                                  desktop:
-                                                                  false,
+                                                                  tabletLandscape: false,
+                                                                  desktop: false,
                                                                 ))
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding:
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                        0,
-                                                                        2,
-                                                                        0,
-                                                                        0),
+                                                                        0, 2, 0, 0),
                                                                     child: Text(
-                                                                      dateTimeFormat(
-                                                                          'relative',
+                                                                      dateTimeFormat('relative',
                                                                           getCurrentTimestamp),
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style:
+                                                                      FlutterFlowTheme.of(
                                                                           context)
                                                                           .bodySmall
                                                                           .override(
-                                                                        fontFamily:
-                                                                        FlutterFlowTheme.of(context).bodySmallFamily,
-                                                                        color:
-                                                                        FlutterFlowTheme.of(context).secondaryText,
+                                                                        fontFamily: FlutterFlowTheme.of(
+                                                                            context)
+                                                                            .bodySmallFamily,
+                                                                        color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                            .secondaryText,
                                                                         letterSpacing:
                                                                         0,
-                                                                        useGoogleFonts:
-                                                                        GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
+                                                                        useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                            .containsKey(
+                                                                            FlutterFlowTheme.of(context)
+                                                                                .bodySmallFamily),
                                                                       ),
                                                                     ),
                                                                   ),
                                                               ],
                                                             ),
                                                           ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(0, 0, 0, 2),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                          .of(context)
-                                                          .secondaryBackground,
-                                                      boxShadow: [
-                                                        BoxShadow(
-                                                          blurRadius: 0,
-                                                          color: FlutterFlowTheme
-                                                              .of(context)
-                                                              .lineColor,
-                                                          offset: const Offset(
-                                                            0,
-                                                            1,
-                                                          ),
-                                                        )
-                                                      ],
-                                                    ),
-                                                    child: Padding(
-                                                      padding:
-                                                      const EdgeInsets.all(12),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                        MainAxisSize.max,
-                                                        children: [
                                                           Expanded(
-                                                            flex: 2,
                                                             child: Row(
-                                                              mainAxisSize:
-                                                              MainAxisSize
-                                                                  .max,
+                                                              mainAxisSize: MainAxisSize.max,
+                                                              mainAxisAlignment:
+                                                              MainAxisAlignment.end,
                                                               children: [
-                                                                Padding(
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                      0,
-                                                                      0,
-                                                                      12,
-                                                                      0),
-                                                                  child:
-                                                                  ClipRRect(
-                                                                    borderRadius:
-                                                                    BorderRadius.circular(
-                                                                        12),
-                                                                    child:
-                                                                    CachedNetworkImage(
-                                                                      fadeInDuration:
-                                                                      const Duration(
-                                                                          milliseconds: 500),
-                                                                      fadeOutDuration:
-                                                                      const Duration(
-                                                                          milliseconds: 500),
-                                                                      imageUrl:
-                                                                      'https://picsum.photos/seed/274/600',
-                                                                      width: 40,
-                                                                      height:
-                                                                      40,
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Column(
-                                                                  mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                                  crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                                  children: [
-                                                                    AutoSizeText(
-                                                                      'joeshwoa',
-                                                                      style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                          .titleMedium
-                                                                          .override(
-                                                                        fontFamily:
-                                                                        FlutterFlowTheme.of(context).titleMediumFamily,
-                                                                        letterSpacing:
-                                                                        0,
-                                                                        useGoogleFonts:
-                                                                        GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleMediumFamily),
-                                                                      ),
-                                                                    ),
-                                                                    if (responsiveVisibility(
-                                                                      context:
-                                                                      context,
-                                                                      tabletLandscape:
-                                                                      false,
-                                                                      desktop:
-                                                                      false,
-                                                                    ))
-                                                                      Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            0,
-                                                                            2,
-                                                                            0,
-                                                                            0),
-                                                                        child:
-                                                                        Text(
-                                                                          'user@domainname.com',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodySmall
-                                                                              .override(
-                                                                            fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
-                                                                            letterSpacing: 0,
-                                                                            useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                  ],
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          if (responsiveVisibility(
-                                                            context: context,
-                                                            phone: false,
-                                                            tablet: false,
-                                                          ))
-                                                            Expanded(
-                                                              flex: 2,
-                                                              child: Text(
-                                                                '30204260100123',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                  fontFamily:
-                                                                  FlutterFlowTheme.of(context)
-                                                                      .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                  0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                      .asMap()
-                                                                      .containsKey(
-                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          if (responsiveVisibility(
-                                                            context: context,
-                                                            phone: false,
-                                                          ))
-                                                            Expanded(
-                                                              child: Text(
-                                                                '01202946596',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                  fontFamily:
-                                                                  FlutterFlowTheme.of(context)
-                                                                      .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                  0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                      .asMap()
-                                                                      .containsKey(
-                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          if (responsiveVisibility(
-                                                            context: context,
-                                                            phone: false,
-                                                            tablet: false,
-                                                          ))
-                                                            Expanded(
-                                                              child: Text(
-                                                                'Dev',
-                                                                style: FlutterFlowTheme.of(
-                                                                    context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                  fontFamily:
-                                                                  FlutterFlowTheme.of(context)
-                                                                      .bodyMediumFamily,
-                                                                  letterSpacing:
-                                                                  0,
-                                                                  useGoogleFonts: GoogleFonts
-                                                                      .asMap()
-                                                                      .containsKey(
-                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          Expanded(
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                              MainAxisSize
-                                                                  .max,
-                                                              crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .end,
-                                                              children: [
-                                                                Text(
-                                                                  '5000 EGP',
-                                                                  style: FlutterFlowTheme.of(
-                                                                      context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                    fontFamily:
-                                                                    FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                    color: FlutterFlowTheme.of(context)
-                                                                        .alternate,
-                                                                    letterSpacing:
-                                                                    0,
-                                                                    useGoogleFonts:
-                                                                    GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                  ),
-                                                                ),
                                                                 if (responsiveVisibility(
-                                                                  context:
-                                                                  context,
-                                                                  tablet: false,
-                                                                  tabletLandscape:
-                                                                  false,
-                                                                  desktop:
-                                                                  false,
+                                                                  context: context,
+                                                                  phone: false,
                                                                 ))
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding:
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                        0,
-                                                                        2,
-                                                                        0,
-                                                                        0),
-                                                                    child: Text(
-                                                                      dateTimeFormat(
-                                                                          'relative',
-                                                                          getCurrentTimestamp),
-                                                                      style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                          .bodySmall
-                                                                          .override(
-                                                                        fontFamily:
-                                                                        FlutterFlowTheme.of(context).bodySmallFamily,
-                                                                        color:
-                                                                        FlutterFlowTheme.of(context).secondaryText,
-                                                                        letterSpacing:
-                                                                        0,
-                                                                        useGoogleFonts:
-                                                                        GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
+                                                                        12, 0, 0, 0),
+                                                                    child: Container(
+                                                                      width: 50,
+                                                                      height: 50,
+                                                                      decoration: BoxDecoration(
+                                                                        color: FlutterFlowTheme
+                                                                            .of(context)
+                                                                            .secondaryBackground,
+                                                                        boxShadow: const [
+                                                                          BoxShadow(
+                                                                            blurRadius: 4,
+                                                                            color: Color(
+                                                                                0x33000000),
+                                                                            offset: Offset(
+                                                                              0,
+                                                                              2,
+                                                                            ),
+                                                                          )
+                                                                        ],
+                                                                        borderRadius:
+                                                                        BorderRadius
+                                                                            .circular(16),
+                                                                      ),
+                                                                      child:
+                                                                      FlutterFlowIconButton(
+                                                                        borderColor:
+                                                                        FlutterFlowTheme.of(
+                                                                            context)
+                                                                            .lineColor,
+                                                                        borderRadius: 12,
+                                                                        borderWidth: 1,
+                                                                        buttonSize: 50,
+                                                                        fillColor: FlutterFlowTheme
+                                                                            .of(context)
+                                                                            .secondaryBackground,
+                                                                        icon: Icon(
+                                                                          Icons.edit_rounded,
+                                                                          color: FlutterFlowTheme
+                                                                              .of(context)
+                                                                              .secondaryText,
+                                                                          size: 24,
+                                                                        ),
+                                                                        onPressed: () async {
+                                                                        },
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                if (responsiveVisibility(
+                                                                  context: context,
+                                                                  phone: false,
+                                                                ))
+                                                                  Padding(
+                                                                    padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                        12, 0, 0, 0),
+                                                                    child: Container(
+                                                                      width: 50,
+                                                                      height: 50,
+                                                                      decoration: BoxDecoration(
+                                                                        color: FlutterFlowTheme
+                                                                            .of(context)
+                                                                            .secondaryBackground,
+                                                                        boxShadow: const [
+                                                                          BoxShadow(
+                                                                            blurRadius: 4,
+                                                                            color: Color(
+                                                                                0x33000000),
+                                                                            offset: Offset(
+                                                                              0,
+                                                                              2,
+                                                                            ),
+                                                                          )
+                                                                        ],
+                                                                        borderRadius:
+                                                                        BorderRadius
+                                                                            .circular(16),
+                                                                      ),
+                                                                      child:
+                                                                      FlutterFlowIconButton(
+                                                                        borderColor:
+                                                                        FlutterFlowTheme.of(
+                                                                            context)
+                                                                            .lineColor,
+                                                                        borderRadius: 12,
+                                                                        borderWidth: 1,
+                                                                        buttonSize: 50,
+                                                                        fillColor: FlutterFlowTheme
+                                                                            .of(context)
+                                                                            .secondaryBackground,
+                                                                        icon: Icon(
+                                                                          Icons.close_rounded,
+                                                                          color: FlutterFlowTheme
+                                                                              .of(context)
+                                                                              .secondaryText,
+                                                                          size: 24,
+                                                                        ),
+                                                                        onPressed: () async {
+                                                                        },
                                                                       ),
                                                                     ),
                                                                   ),
@@ -932,7 +770,8 @@ class _TeamPageState extends State<TeamPage> {
                         ],
                       ),
                     ),
-                  ),
+                  )
+                  ,
                 ],
               ),
             ),
