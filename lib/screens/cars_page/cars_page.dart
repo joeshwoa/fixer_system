@@ -1,28 +1,28 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fixer_system/components/main_nav/main_nav.dart';
-import 'package:flutter/material.dart';
 import 'package:flutterflow_ui_pro/flutterflow_ui_pro.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'inventory_page_model.dart';
-export 'inventory_page_model.dart';
+import 'cars_page_model.dart';
+export 'cars_page_model.dart';
 
-class InventoryPage extends StatefulWidget {
-  const InventoryPage({super.key});
+class CarsPage extends StatefulWidget {
+  const CarsPage({super.key});
 
   @override
-  State<InventoryPage> createState() => _InventoryPageState();
+  State<CarsPage> createState() => _CarsPageState();
 }
 
-class _InventoryPageState extends State<InventoryPage> {
-  late InventoryPageModel _model;
+class _CarsPageState extends State<CarsPage> {
+  late CarsPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => InventoryPageModel());
+    _model = createModel(context, () => CarsPageModel());
   }
 
   @override
@@ -55,13 +55,13 @@ class _InventoryPageState extends State<InventoryPage> {
                   model: _model.mainNavModel,
                   updateCallback: () => setState(() {}),
                   child: MainNavWidget(
-                    navOne: FlutterFlowTheme.of(context).secondaryText,
+                    navOne: FlutterFlowTheme.of(context).alternate,
                     navTwo: FlutterFlowTheme.of(context).secondaryText,
                     navThree: FlutterFlowTheme.of(context).secondaryText,
                     navFour: FlutterFlowTheme.of(context).secondaryText,
                     navFive: FlutterFlowTheme.of(context).secondaryText,
                     navSix: FlutterFlowTheme.of(context).secondaryText,
-                    navSeven: FlutterFlowTheme.of(context).alternate,
+                    navSeven: FlutterFlowTheme.of(context).secondaryText,
                   ),
                 ),
               Expanded(
@@ -109,7 +109,7 @@ class _InventoryPageState extends State<InventoryPage> {
                                             CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Inventory',
+                                                'Cars',
                                                 style:
                                                 FlutterFlowTheme.of(context)
                                                     .displaySmall
@@ -131,7 +131,7 @@ class _InventoryPageState extends State<InventoryPage> {
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(0, 4, 0, 0),
                                                 child: Text(
-                                                  'Manage your items below.',
+                                                  'Manage your clients\'s cars below.',
                                                   style: FlutterFlowTheme.of(
                                                       context)
                                                       .bodySmall
@@ -256,7 +256,7 @@ class _InventoryPageState extends State<InventoryPage> {
                                                         .of(context)
                                                         .secondaryBackground,
                                                     icon: Icon(
-                                                      Icons.add_rounded,
+                                                      Icons.person_add_rounded,
                                                       color:
                                                       FlutterFlowTheme.of(
                                                           context)
@@ -264,6 +264,7 @@ class _InventoryPageState extends State<InventoryPage> {
                                                       size: 24,
                                                     ),
                                                     onPressed: () async {
+
                                                     },
                                                   ),
                                                 ),
@@ -325,9 +326,8 @@ class _InventoryPageState extends State<InventoryPage> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Expanded(
-                                                    flex: 2,
                                                     child: Text(
-                                                      'Name',
+                                                      'Car',
                                                       style:
                                                       FlutterFlowTheme.of(
                                                           context)
@@ -349,10 +349,11 @@ class _InventoryPageState extends State<InventoryPage> {
                                                   if (responsiveVisibility(
                                                     context: context,
                                                     phone: false,
+                                                    tablet: false,
                                                   ))
                                                     Expanded(
                                                       child: Text(
-                                                        'Quantity',
+                                                        'Car ID',
                                                         style:
                                                         FlutterFlowTheme.of(
                                                             context)
@@ -374,11 +375,35 @@ class _InventoryPageState extends State<InventoryPage> {
                                                   if (responsiveVisibility(
                                                     context: context,
                                                     phone: false,
-                                                    tablet: false,
                                                   ))
                                                     Expanded(
                                                       child: Text(
-                                                        'Sell Price',
+                                                        'Car Code',
+                                                        style:
+                                                        FlutterFlowTheme.of(
+                                                            context)
+                                                            .bodySmall
+                                                            .override(
+                                                          fontFamily: FlutterFlowTheme.of(
+                                                              context)
+                                                              .bodySmallFamily,
+                                                          letterSpacing:
+                                                          0,
+                                                          useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                              .containsKey(
+                                                              FlutterFlowTheme.of(context)
+                                                                  .bodySmallFamily),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (responsiveVisibility(
+                                                    context: context,
+                                                    phone: false,
+                                                  ))
+                                                    Expanded(
+                                                      child: Text(
+                                                        'Owner',
                                                         style:
                                                         FlutterFlowTheme.of(
                                                             context)
@@ -462,7 +487,6 @@ class _InventoryPageState extends State<InventoryPage> {
                                                           MainAxisSize.max,
                                                           children: [
                                                             Expanded(
-                                                              flex: 2,
                                                               child: Row(
                                                                 mainAxisSize:
                                                                 MainAxisSize
@@ -502,42 +526,8 @@ class _InventoryPageState extends State<InventoryPage> {
                                                                         ),
                                                                     ],
                                                                   ),
-                                                                  Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                        0,
-                                                                        0,
-                                                                        12,
-                                                                        0),
-                                                                    child:
-                                                                    Container(
-                                                                      width: 40,
-                                                                      height:
-                                                                      40,
-                                                                      decoration:
-                                                                      BoxDecoration(
-                                                                        color: const Color(
-                                                                            0x51FD6570),
-                                                                        borderRadius:
-                                                                        BorderRadius.circular(12),
-                                                                      ),
-                                                                      alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0,
-                                                                          0),
-                                                                      child:
-                                                                      Icon(
-                                                                        Icons
-                                                                            .electrical_services_rounded,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .alternate,
-                                                                        size:
-                                                                        32,
-                                                                      ),
-                                                                    ),
-                                                                  ),
                                                                   AutoSizeText(
-                                                                    'oil',
+                                                                    'KIA 2013',
                                                                     style: FlutterFlowTheme.of(
                                                                         context)
                                                                         .titleMedium
@@ -556,16 +546,19 @@ class _InventoryPageState extends State<InventoryPage> {
                                                             if (responsiveVisibility(
                                                               context: context,
                                                               phone: false,
+                                                              tablet: false,
                                                             ))
                                                               Expanded(
                                                                 child: Text(
-                                                                  '13',
+                                                                  'abc1234',
                                                                   style: FlutterFlowTheme.of(
                                                                       context)
                                                                       .bodyMedium
                                                                       .override(
                                                                     fontFamily:
                                                                     FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                    color: FlutterFlowTheme.of(context)
+                                                                        .primaryText,
                                                                     letterSpacing:
                                                                     0,
                                                                     useGoogleFonts:
@@ -576,19 +569,16 @@ class _InventoryPageState extends State<InventoryPage> {
                                                             if (responsiveVisibility(
                                                               context: context,
                                                               phone: false,
-                                                              tablet: false,
                                                             ))
                                                               Expanded(
                                                                 child: Text(
-                                                                  '5000 EGP',
+                                                                  '1a2s3d4f',
                                                                   style: FlutterFlowTheme.of(
                                                                       context)
                                                                       .bodyMedium
                                                                       .override(
                                                                     fontFamily:
                                                                     FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                    color: FlutterFlowTheme.of(context)
-                                                                        .alternate,
                                                                     letterSpacing:
                                                                     0,
                                                                     useGoogleFonts:
@@ -596,6 +586,25 @@ class _InventoryPageState extends State<InventoryPage> {
                                                                   ),
                                                                 ),
                                                               ),
+                                                            Expanded(
+                                                              child: Text(
+                                                                'joeshwoa',
+                                                                style: FlutterFlowTheme.of(
+                                                                    context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                  fontFamily:
+                                                                  FlutterFlowTheme.of(context)
+                                                                      .bodyMediumFamily,
+                                                                  letterSpacing:
+                                                                  0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                      .asMap()
+                                                                      .containsKey(
+                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                ),
+                                                              ),
+                                                            ),
                                                             Expanded(
                                                               child: Row(
                                                                 mainAxisSize:
@@ -663,6 +672,7 @@ class _InventoryPageState extends State<InventoryPage> {
                                                                           ),
                                                                           onPressed:
                                                                               () async {
+
                                                                           },
                                                                         ),
                                                                       ),

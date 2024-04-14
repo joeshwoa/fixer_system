@@ -1,28 +1,30 @@
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fixer_system/components/main_nav/main_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterflow_ui_pro/flutterflow_ui_pro.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'clients_page_model.dart';
-export 'clients_page_model.dart';
 
-class ClientsPage extends StatefulWidget {
-  const ClientsPage({super.key});
+import 'cars_in_garage_page_model.dart';
+export 'cars_in_garage_page_model.dart';
+
+class CarsInGaragePage extends StatefulWidget {
+  const CarsInGaragePage({super.key});
 
   @override
-  State<ClientsPage> createState() => _ClientsPageState();
+  State<CarsInGaragePage> createState() => _CarsInGaragePageState();
 }
 
-class _ClientsPageState extends State<ClientsPage> {
-  late ClientsPageModel _model;
+class _CarsInGaragePageState extends State<CarsInGaragePage> {
+  late CarsInGaragePageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ClientsPageModel());
+    _model = createModel(context, () => CarsInGaragePageModel());
   }
 
   @override
@@ -56,8 +58,8 @@ class _ClientsPageState extends State<ClientsPage> {
                   updateCallback: () => setState(() {}),
                   child: MainNavWidget(
                     navOne: FlutterFlowTheme.of(context).secondaryText,
-                    navTwo: FlutterFlowTheme.of(context).alternate,
-                    navThree: FlutterFlowTheme.of(context).secondaryText,
+                    navTwo: FlutterFlowTheme.of(context).secondaryText,
+                    navThree: FlutterFlowTheme.of(context).alternate,
                     navFour: FlutterFlowTheme.of(context).secondaryText,
                     navFive: FlutterFlowTheme.of(context).secondaryText,
                     navSix: FlutterFlowTheme.of(context).secondaryText,
@@ -109,7 +111,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                             CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Clients',
+                                                'Cars in garage',
                                                 style:
                                                 FlutterFlowTheme.of(context)
                                                     .displaySmall
@@ -131,7 +133,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(0, 4, 0, 0),
                                                 child: Text(
-                                                  'Manage your clients below.',
+                                                  'Manage your clients\'s cars in ypur center below.',
                                                   style: FlutterFlowTheme.of(
                                                       context)
                                                       .bodySmall
@@ -256,7 +258,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                         .of(context)
                                                         .secondaryBackground,
                                                     icon: Icon(
-                                                      Icons.person_add_rounded,
+                                                      Icons.car_repair_rounded,
                                                       color:
                                                       FlutterFlowTheme.of(
                                                           context)
@@ -264,6 +266,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                       size: 24,
                                                     ),
                                                     onPressed: () async {
+
                                                     },
                                                   ),
                                                 ),
@@ -326,7 +329,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      'Name',
+                                                      'Car',
                                                       style:
                                                       FlutterFlowTheme.of(
                                                           context)
@@ -352,57 +355,82 @@ class _ClientsPageState extends State<ClientsPage> {
                                                   ))
                                                     Expanded(
                                                       child: Text(
-                                                        'Phone Number',
-                                                        style:
-                                                        FlutterFlowTheme.of(
-                                                            context)
-                                                            .bodySmall
-                                                            .override(
-                                                          fontFamily: FlutterFlowTheme.of(
-                                                              context)
-                                                              .bodySmallFamily,
-                                                          letterSpacing:
-                                                          0,
-                                                          useGoogleFonts: GoogleFonts
-                                                              .asMap()
-                                                              .containsKey(
-                                                              FlutterFlowTheme.of(context)
-                                                                  .bodySmallFamily),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  if (responsiveVisibility(
-                                                    context: context,
-                                                    phone: false,
-                                                  ))
-                                                    Expanded(
-                                                      child: Text(
-                                                        'Car',
-                                                        style:
-                                                        FlutterFlowTheme.of(
-                                                            context)
-                                                            .bodySmall
-                                                            .override(
-                                                          fontFamily: FlutterFlowTheme.of(
-                                                              context)
-                                                              .bodySmallFamily,
-                                                          letterSpacing:
-                                                          0,
-                                                          useGoogleFonts: GoogleFonts
-                                                              .asMap()
-                                                              .containsKey(
-                                                              FlutterFlowTheme.of(context)
-                                                                  .bodySmallFamily),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  if (responsiveVisibility(
-                                                    context: context,
-                                                    phone: false,
-                                                  ))
-                                                    Expanded(
-                                                      child: Text(
                                                         'Car ID',
+                                                        style:
+                                                        FlutterFlowTheme.of(
+                                                            context)
+                                                            .bodySmall
+                                                            .override(
+                                                          fontFamily: FlutterFlowTheme.of(
+                                                              context)
+                                                              .bodySmallFamily,
+                                                          letterSpacing:
+                                                          0,
+                                                          useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                              .containsKey(
+                                                              FlutterFlowTheme.of(context)
+                                                                  .bodySmallFamily),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (responsiveVisibility(
+                                                    context: context,
+                                                    phone: false,
+                                                  ))
+                                                    Expanded(
+                                                      child: Text(
+                                                        'Car Code',
+                                                        style:
+                                                        FlutterFlowTheme.of(
+                                                            context)
+                                                            .bodySmall
+                                                            .override(
+                                                          fontFamily: FlutterFlowTheme.of(
+                                                              context)
+                                                              .bodySmallFamily,
+                                                          letterSpacing:
+                                                          0,
+                                                          useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                              .containsKey(
+                                                              FlutterFlowTheme.of(context)
+                                                                  .bodySmallFamily),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (responsiveVisibility(
+                                                    context: context,
+                                                    phone: false,
+                                                  ))
+                                                    Expanded(
+                                                      child: Text(
+                                                        'Owner',
+                                                        style:
+                                                        FlutterFlowTheme.of(
+                                                            context)
+                                                            .bodySmall
+                                                            .override(
+                                                          fontFamily: FlutterFlowTheme.of(
+                                                              context)
+                                                              .bodySmallFamily,
+                                                          letterSpacing:
+                                                          0,
+                                                          useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                              .containsKey(
+                                                              FlutterFlowTheme.of(context)
+                                                                  .bodySmallFamily),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  if (responsiveVisibility(
+                                                    context: context,
+                                                    phone: false,
+                                                  ))
+                                                    Expanded(
+                                                      child: Text(
+                                                        'Repair Percentage',
                                                         style:
                                                         FlutterFlowTheme.of(
                                                             context)
@@ -526,7 +554,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                                     ],
                                                                   ),
                                                                   AutoSizeText(
-                                                                    'joeshwoa',
+                                                                    'KIA 2013',
                                                                     style: FlutterFlowTheme.of(
                                                                         context)
                                                                         .titleMedium
@@ -549,7 +577,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                             ))
                                                               Expanded(
                                                                 child: Text(
-                                                                  '01202946596',
+                                                                  'abc1234',
                                                                   style: FlutterFlowTheme.of(
                                                                       context)
                                                                       .bodyMedium
@@ -571,7 +599,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                             ))
                                                               Expanded(
                                                                 child: Text(
-                                                                  'KIA 2013',
+                                                                  '1a2s3d4f',
                                                                   style: FlutterFlowTheme.of(
                                                                       context)
                                                                       .bodyMedium
@@ -587,7 +615,7 @@ class _ClientsPageState extends State<ClientsPage> {
                                                               ),
                                                             Expanded(
                                                               child: Text(
-                                                                'abc1234',
+                                                                'joeshwoa',
                                                                 style: FlutterFlowTheme.of(
                                                                     context)
                                                                     .bodyMedium
@@ -595,6 +623,28 @@ class _ClientsPageState extends State<ClientsPage> {
                                                                   fontFamily:
                                                                   FlutterFlowTheme.of(context)
                                                                       .bodyMediumFamily,
+                                                                  letterSpacing:
+                                                                  0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                      .asMap()
+                                                                      .containsKey(
+                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Expanded(
+                                                              child: Text(
+                                                                '7/8',
+                                                                style: FlutterFlowTheme.of(
+                                                                    context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                  fontFamily:
+                                                                  FlutterFlowTheme.of(context)
+                                                                      .bodyMediumFamily,
+                                                                  color: FlutterFlowTheme.of(
+                                                                      context)
+                                                                      .alternate,
                                                                   letterSpacing:
                                                                   0,
                                                                   useGoogleFonts: GoogleFonts
@@ -663,6 +713,69 @@ class _ClientsPageState extends State<ClientsPage> {
                                                                           FlutterFlowTheme.of(context).secondaryBackground,
                                                                           icon:
                                                                           Icon(
+                                                                            Icons.settings_rounded,
+                                                                            color:
+                                                                            FlutterFlowTheme.of(context).secondaryText,
+                                                                            size:
+                                                                            24,
+                                                                          ),
+                                                                          onPressed:
+                                                                              () async {
+
+                                                                          },
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  if (responsiveVisibility(
+                                                                    context:
+                                                                    context,
+                                                                    phone:
+                                                                    false,
+                                                                  ))
+                                                                    Padding(
+                                                                      padding: const EdgeInsetsDirectional
+                                                                          .fromSTEB(
+                                                                          12,
+                                                                          0,
+                                                                          0,
+                                                                          0),
+                                                                      child:
+                                                                      Container(
+                                                                        width:
+                                                                        50,
+                                                                        height:
+                                                                        50,
+                                                                        decoration:
+                                                                        BoxDecoration(
+                                                                          color:
+                                                                          FlutterFlowTheme.of(context).secondaryBackground,
+                                                                          boxShadow: const [
+                                                                            BoxShadow(
+                                                                              blurRadius: 4,
+                                                                              color: Color(0x33000000),
+                                                                              offset: Offset(
+                                                                                0,
+                                                                                2,
+                                                                              ),
+                                                                            )
+                                                                          ],
+                                                                          borderRadius:
+                                                                          BorderRadius.circular(16),
+                                                                        ),
+                                                                        child:
+                                                                        FlutterFlowIconButton(
+                                                                          borderColor:
+                                                                          FlutterFlowTheme.of(context).lineColor,
+                                                                          borderRadius:
+                                                                          12,
+                                                                          borderWidth:
+                                                                          1,
+                                                                          buttonSize:
+                                                                          50,
+                                                                          fillColor:
+                                                                          FlutterFlowTheme.of(context).secondaryBackground,
+                                                                          icon:
+                                                                          Icon(
                                                                             Icons.edit_rounded,
                                                                             color:
                                                                             FlutterFlowTheme.of(context).secondaryText,
@@ -671,11 +784,386 @@ class _ClientsPageState extends State<ClientsPage> {
                                                                           ),
                                                                           onPressed:
                                                                               () async {
+
                                                                           },
                                                                         ),
                                                                       ),
                                                                     ),
                                                                 ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                        0, 0, 0, 2),
+                                                    child: Container(
+                                                      width: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                            .of(context)
+                                                            .secondaryBackground,
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            blurRadius: 0,
+                                                            color: FlutterFlowTheme
+                                                                .of(context)
+                                                                .lineColor,
+                                                            offset: const Offset(
+                                                              0,
+                                                              1,
+                                                            ),
+                                                          )
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                        const EdgeInsets.all(12),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                          MainAxisSize.max,
+                                                          children: [
+                                                            Expanded(
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                                children: [
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                    crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                    children: [
+                                                                      if (responsiveVisibility(
+                                                                        context:
+                                                                        context,
+                                                                        tabletLandscape:
+                                                                        false,
+                                                                        desktop:
+                                                                        false,
+                                                                      ))
+                                                                        Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              0,
+                                                                              2,
+                                                                              0,
+                                                                              0),
+                                                                          child:
+                                                                          Text(
+                                                                            'user@domainname.com',
+                                                                            style: FlutterFlowTheme.of(context).bodySmall.override(
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
+                                                                              letterSpacing: 0,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                    ],
+                                                                  ),
+                                                                  AutoSizeText(
+                                                                    'KIA 2013',
+                                                                    style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                        .titleMedium
+                                                                        .override(
+                                                                      fontFamily:
+                                                                      FlutterFlowTheme.of(context).titleMediumFamily,
+                                                                      letterSpacing:
+                                                                      0,
+                                                                      useGoogleFonts:
+                                                                      GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleMediumFamily),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                              tablet: false,
+                                                            ))
+                                                              Expanded(
+                                                                child: Text(
+                                                                  'abc1234',
+                                                                  style: FlutterFlowTheme.of(
+                                                                      context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                    fontFamily:
+                                                                    FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                    color: FlutterFlowTheme.of(context)
+                                                                        .primaryText,
+                                                                    letterSpacing:
+                                                                    0,
+                                                                    useGoogleFonts:
+                                                                    GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                            ))
+                                                              Expanded(
+                                                                child: Text(
+                                                                  '1a2s3d4f',
+                                                                  style: FlutterFlowTheme.of(
+                                                                      context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                    fontFamily:
+                                                                    FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                    letterSpacing:
+                                                                    0,
+                                                                    useGoogleFonts:
+                                                                    GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            Expanded(
+                                                              child: Text(
+                                                                'joeshwoa',
+                                                                style: FlutterFlowTheme.of(
+                                                                    context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                  fontFamily:
+                                                                  FlutterFlowTheme.of(context)
+                                                                      .bodyMediumFamily,
+                                                                  letterSpacing:
+                                                                  0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                      .asMap()
+                                                                      .containsKey(
+                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Expanded(
+                                                              child: Text(
+                                                                '8/8',
+                                                                style: FlutterFlowTheme.of(
+                                                                    context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                  fontFamily:
+                                                                  FlutterFlowTheme.of(context)
+                                                                      .bodyMediumFamily,
+                                                                  color: FlutterFlowTheme.of(
+                                                                      context)
+                                                                      .alternate,
+                                                                  letterSpacing:
+                                                                  0,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                      .asMap()
+                                                                      .containsKey(
+                                                                      FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Expanded(
+                                                              child:
+                                                              SingleChildScrollView(
+                                                                scrollDirection:
+                                                                Axis.horizontal,
+                                                                child: Row(
+                                                                  mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .max,
+                                                                  mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .end,
+                                                                  children: [
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                      context,
+                                                                      phone:
+                                                                      false,
+                                                                    ))
+                                                                      Padding(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            12,
+                                                                            0,
+                                                                            0,
+                                                                            0),
+                                                                        child:
+                                                                        Container(
+                                                                          width:
+                                                                          50,
+                                                                          height:
+                                                                          50,
+                                                                          decoration:
+                                                                          BoxDecoration(
+                                                                            color:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            boxShadow: const [
+                                                                              BoxShadow(
+                                                                                blurRadius: 4,
+                                                                                color: Color(0x33000000),
+                                                                                offset: Offset(
+                                                                                  0,
+                                                                                  2,
+                                                                                ),
+                                                                              )
+                                                                            ],
+                                                                            borderRadius:
+                                                                            BorderRadius.circular(16),
+                                                                          ),
+                                                                          child:
+                                                                          FlutterFlowIconButton(
+                                                                            borderColor:
+                                                                            FlutterFlowTheme.of(context).lineColor,
+                                                                            borderRadius:
+                                                                            12,
+                                                                            borderWidth:
+                                                                            1,
+                                                                            buttonSize:
+                                                                            50,
+                                                                            fillColor:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            icon:
+                                                                            Icon(
+                                                                              Icons.done_rounded,
+                                                                              color: FlutterFlowTheme.of(context).secondary,
+                                                                              size: 24,
+                                                                            ),
+                                                                            onPressed:
+                                                                                () async {
+
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                      context,
+                                                                      phone:
+                                                                      false,
+                                                                    ))
+                                                                      Padding(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            12,
+                                                                            0,
+                                                                            0,
+                                                                            0),
+                                                                        child:
+                                                                        Container(
+                                                                          width:
+                                                                          50,
+                                                                          height:
+                                                                          50,
+                                                                          decoration:
+                                                                          BoxDecoration(
+                                                                            color:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            boxShadow: const [
+                                                                              BoxShadow(
+                                                                                blurRadius: 4,
+                                                                                color: Color(0x33000000),
+                                                                                offset: Offset(
+                                                                                  0,
+                                                                                  2,
+                                                                                ),
+                                                                              )
+                                                                            ],
+                                                                            borderRadius:
+                                                                            BorderRadius.circular(16),
+                                                                          ),
+                                                                          child:
+                                                                          FlutterFlowIconButton(
+                                                                            borderColor:
+                                                                            FlutterFlowTheme.of(context).lineColor,
+                                                                            borderRadius:
+                                                                            12,
+                                                                            borderWidth:
+                                                                            1,
+                                                                            buttonSize:
+                                                                            50,
+                                                                            fillColor:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            icon:
+                                                                            Icon(
+                                                                              Icons.settings_rounded,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              size: 24,
+                                                                            ),
+                                                                            onPressed:
+                                                                                () async {
+
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                      context,
+                                                                      phone:
+                                                                      false,
+                                                                    ))
+                                                                      Padding(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            12,
+                                                                            0,
+                                                                            0,
+                                                                            0),
+                                                                        child:
+                                                                        Container(
+                                                                          width:
+                                                                          50,
+                                                                          height:
+                                                                          50,
+                                                                          decoration:
+                                                                          BoxDecoration(
+                                                                            color:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            boxShadow: const [
+                                                                              BoxShadow(
+                                                                                blurRadius: 4,
+                                                                                color: Color(0x33000000),
+                                                                                offset: Offset(
+                                                                                  0,
+                                                                                  2,
+                                                                                ),
+                                                                              )
+                                                                            ],
+                                                                            borderRadius:
+                                                                            BorderRadius.circular(16),
+                                                                          ),
+                                                                          child:
+                                                                          FlutterFlowIconButton(
+                                                                            borderColor:
+                                                                            FlutterFlowTheme.of(context).lineColor,
+                                                                            borderRadius:
+                                                                            12,
+                                                                            borderWidth:
+                                                                            1,
+                                                                            buttonSize:
+                                                                            50,
+                                                                            fillColor:
+                                                                            FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            icon:
+                                                                            Icon(
+                                                                              Icons.edit_rounded,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              size: 24,
+                                                                            ),
+                                                                            onPressed:
+                                                                                () async {
+
+                                                                            },
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                  ],
+                                                                ),
                                                               ),
                                                             ),
                                                           ],

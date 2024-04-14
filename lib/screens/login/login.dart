@@ -54,6 +54,12 @@ class _LoginState extends State<Login> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Expanded(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 75),
                   child: Hero(
@@ -71,7 +77,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                   child: SizedBox(
                     width: MediaQuery.sizeOf(context).width * 0.3,
                     child: TextFormField(
@@ -145,7 +151,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                   child: SizedBox(
                     width: MediaQuery.sizeOf(context).width * 0.3,
                     child: TextFormField(
@@ -266,6 +272,41 @@ class _LoginState extends State<Login> {
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                          child: Text(
+                            'Powered by',
+                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              fontSize: 18,
+                              letterSpacing: 0,
+                              useGoogleFonts: GoogleFonts.asMap()
+                                  .containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                            ),
+                          ),
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(
+                            'assets/images/ei_1693592425619-removebg-preview.png',
+                            width: 50,
+                            height: 50,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
